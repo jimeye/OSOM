@@ -31,9 +31,13 @@ export default function HomePage() {
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
           <div className="text-center">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 1.2, 
+                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: 0.2
+              }}
               className="mb-8"
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-white mb-6 leading-tight drop-shadow-2xl uppercase tracking-wider">
@@ -54,14 +58,29 @@ export default function HomePage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              initial={{ opacity: 0, y: 30, scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 1.0, 
+                ease: [0.34, 1.56, 0.64, 1],
+                delay: 0.6
+              }}
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.08, 
+                  y: -2,
+                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.3)"
+                }}
                 whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  ease: [0.34, 1.56, 0.64, 1],
+                  delay: 0.8
+                }}
                 className="bg-forest-500 text-white px-10 py-5 rounded-full font-semibold text-xl xl:text-2xl hover:bg-forest-600 transition-all duration-300 flex items-center space-x-3 shadow-2xl hover:shadow-forest-500/25 backdrop-blur-sm"
               >
                 <Zap className="w-6 h-6 xl:w-7 xl:h-7" />
@@ -70,8 +89,19 @@ export default function HomePage() {
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ 
+                  scale: 1.08, 
+                  y: -2,
+                  backgroundColor: "rgba(255, 255, 255, 0.2)"
+                }}
                 whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  ease: [0.34, 1.56, 0.64, 1],
+                  delay: 1.0
+                }}
                 className="border-2 border-white/80 text-white px-10 py-5 rounded-full font-semibold text-xl xl:text-2xl hover:bg-white/10 transition-all duration-300 flex items-center space-x-3 backdrop-blur-sm"
               >
                 <span>En savoir plus</span>
@@ -80,9 +110,13 @@ export default function HomePage() {
 
             {/* Trust indicators */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ 
+                duration: 1.0, 
+                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: 1.2
+              }}
               className="mt-16 flex flex-wrap justify-center items-center gap-12 text-lg xl:text-xl text-white/80"
             >
               <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-6 py-3 rounded-full">
@@ -106,9 +140,12 @@ export default function HomePage() {
       <section className="py-24 xl:py-32 bg-white">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -141,11 +178,20 @@ export default function HomePage() {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 50, scale: 0.8, rotateX: -15 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.15,
+                  ease: [0.34, 1.56, 0.64, 1]
+                }}
                 viewport={{ once: true }}
-                whileHover={{ y: -5 }}
+                whileHover={{ 
+                  y: -10, 
+                  scale: 1.02,
+                  rotateY: 5,
+                  boxShadow: "0 25px 50px rgba(0, 0, 0, 0.15)"
+                }}
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-100"
               >
                 <div className="text-primary-500 mb-4">
@@ -167,9 +213,12 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-br from-primary-50 to-secondary-50">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -269,9 +318,12 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -338,9 +390,12 @@ export default function HomePage() {
       <section className="py-20 bg-neutral-50">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
@@ -403,9 +458,12 @@ export default function HomePage() {
 
           {/* Stats */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
             viewport={{ once: true }}
             className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
           >
@@ -439,9 +497,12 @@ export default function HomePage() {
       <section className="py-20 bg-gradient-to-r from-primary-500 to-secondary-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.46, 0.45, 0.94]
+            }}
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
