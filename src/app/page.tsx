@@ -29,28 +29,60 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
-          <div className="text-center">
+          <div className="text-left">
             <motion.div
-              initial={{ opacity: 0, y: 50, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, x: -150, scale: 0.3, rotateX: -45, rotateY: -15 }}
+              animate={{ opacity: 1, x: 0, scale: 1, rotateX: 0, rotateY: 0 }}
               transition={{ 
-                duration: 1.2, 
-                ease: [0.25, 0.46, 0.45, 0.94],
+                duration: 2.2, 
+                ease: [0.34, 1.56, 0.64, 1],
                 delay: 0.2
+              }}
+              whileHover={{ 
+                scale: 1.08, 
+                y: -10,
+                x: 15,
+                rotateY: 5,
+                boxShadow: "0 30px 60px rgba(0, 0, 0, 0.3)",
+                transition: { duration: 0.4 }
               }}
               className="mb-8"
             >
-              <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-white mb-6 leading-tight drop-shadow-2xl uppercase tracking-wider">
-                <span className="block text-white/90 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-2 tracking-widest">
-                  RÉALISEZ JUSQU'À
-                </span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-forest-300 via-leaf-400 to-ocean-400 font-black text-5xl md:text-7xl lg:text-8xl xl:text-9xl 2xl:text-[12rem] leading-none tracking-tight">
-                  40% D'ÉCONOMIES
-                </span>
-                <span className="block text-white/95 text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold mt-2 tracking-wider">
-                  D'ÉNERGIE
-                </span>
-              </h1>
+              <motion.h1 
+                initial={{ opacity: 0, y: 80, scale: 0.5, rotateX: -30 }}
+                animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0 }}
+                transition={{ 
+                  duration: 2.0, 
+                  ease: [0.34, 1.56, 0.64, 1],
+                  delay: 0.4
+                }}
+                whileHover={{ 
+                  scale: 1.05,
+                  y: -8,
+                  rotateY: 3,
+                  transition: { duration: 0.3 }
+                }}
+                className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-white mb-6 leading-none drop-shadow-2xl tracking-wider text-left"
+              >
+                <motion.span 
+                  initial={{ opacity: 0, x: -100, scale: 0.8 }}
+                  animate={{ opacity: 1, x: 0, scale: 1 }}
+                  transition={{ 
+                    duration: 1.8, 
+                    ease: [0.34, 1.56, 0.64, 1],
+                    delay: 0.6
+                  }}
+                  whileHover={{ 
+                    scale: 1.02,
+                    color: "#22c55e",
+                    textShadow: "0 0 20px rgba(34, 197, 94, 0.5)",
+                    transition: { duration: 0.3 }
+                  }}
+                  className="text-white/90 text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-widest leading-none"
+                >
+                  Remplacement LED Intérieur & Extérieur 100% Gratuit en DOM-TOM
+                </motion.span>
+              </motion.h1>
               <p className="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
                 Grâce aux LED financées par les CEE dans les DOM-TOM. 
                 <span className="font-semibold text-forest-300"> Vos travaux sont 100% gratuits.</span>
@@ -65,7 +97,7 @@ export default function HomePage() {
                 ease: [0.34, 1.56, 0.64, 1],
                 delay: 0.6
               }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-6 justify-start items-start"
             >
               <motion.button
                 whileHover={{ 
@@ -117,7 +149,7 @@ export default function HomePage() {
                 ease: [0.25, 0.46, 0.45, 0.94],
                 delay: 1.2
               }}
-              className="mt-16 flex flex-wrap justify-center items-center gap-12 text-lg xl:text-xl text-white/80"
+              className="mt-16 flex flex-wrap justify-start items-center gap-12 text-lg xl:text-xl text-white/80"
             >
               <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-6 py-3 rounded-full">
                 <Shield className="w-6 h-6 text-forest-300" />

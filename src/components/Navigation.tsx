@@ -8,11 +8,19 @@ import { Menu, X, Leaf, Zap } from 'lucide-react';
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isTestPage, setIsTestPage] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+    
+    // Vérifier si on est sur une page de test
+    const checkTestPage = () => {
+      setIsTestPage(window.location.pathname.includes('/test-'));
+    };
+    
+    checkTestPage();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -50,7 +58,7 @@ export default function Navigation() {
                 <Leaf className="w-5 h-5 text-white" />
               </div>
               <span className={`text-xl font-bold transition-colors duration-300 ${
-                scrolled ? 'text-neutral-900' : 'text-white drop-shadow-lg'
+                isTestPage ? 'text-black' : (scrolled ? 'text-neutral-900' : 'text-white drop-shadow-lg')
               }`}>
                 OSOM
               </span>
@@ -64,9 +72,11 @@ export default function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`transition-colors duration-200 font-medium ${
-                  scrolled 
-                    ? 'text-neutral-700 hover:text-primary-600' 
-                    : 'text-white/90 hover:text-white drop-shadow-md'
+                  isTestPage 
+                    ? 'text-black hover:text-primary-600' 
+                    : (scrolled 
+                        ? 'text-neutral-700 hover:text-primary-600' 
+                        : 'text-white/90 hover:text-white drop-shadow-md')
                 }`}
               >
                 {item.label}
@@ -76,9 +86,13 @@ export default function Navigation() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-200 flex items-center space-x-2 ${
-                scrolled 
+                isTestPage
                   ? 'bg-primary-500 text-white hover:bg-primary-600' 
-                  : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'
+                  : (                isTestPage
+                  ? 'bg-primary-500 text-white hover:bg-primary-600' 
+                  : (scrolled 
+                      ? 'bg-primary-500 text-white hover:bg-primary-600' 
+                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'))
               }`}
             >
               <Zap className="w-4 h-4" />
@@ -90,9 +104,11 @@ export default function Navigation() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              scrolled 
-                ? 'text-neutral-700 hover:bg-neutral-100' 
-                : 'text-white hover:bg-white/20'
+              isTestPage
+                ? 'text-black hover:bg-gray-100' 
+                : (scrolled 
+                    ? 'text-neutral-700 hover:bg-neutral-100' 
+                    : 'text-white hover:bg-white/20')
             }`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -108,9 +124,11 @@ export default function Navigation() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               className={`md:hidden backdrop-blur-md border-t ${
-                scrolled 
+                isTestPage
                   ? 'bg-white/95 border-neutral-200' 
-                  : 'bg-black/20 border-white/20'
+                  : (scrolled 
+                      ? 'bg-white/95 border-neutral-200' 
+                      : 'bg-black/20 border-white/20')
               }`}
             >
             <div className="px-4 py-4 space-y-4">
@@ -120,9 +138,11 @@ export default function Navigation() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={`block transition-colors duration-200 font-medium py-2 ${
-                    scrolled 
-                      ? 'text-neutral-700 hover:text-primary-600' 
-                      : 'text-white hover:text-white/80'
+                    isTestPage
+                      ? 'text-black hover:text-primary-600' 
+                      : (scrolled 
+                          ? 'text-neutral-700 hover:text-primary-600' 
+                          : 'text-white hover:text-white/80')
                   }`}
                 >
                   {item.label}
@@ -132,9 +152,11 @@ export default function Navigation() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className={`w-full px-6 py-3 rounded-full font-medium transition-colors duration-200 flex items-center justify-center space-x-2 ${
-                  scrolled 
-                    ? 'bg-primary-500 text-white hover:bg-primary-600' 
-                    : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'
+                isTestPage
+                  ? 'bg-primary-500 text-white hover:bg-primary-600' 
+                  : (scrolled 
+                      ? 'bg-primary-500 text-white hover:bg-primary-600' 
+                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30')
                 }`}
               >
                 <Zap className="w-4 h-4" />

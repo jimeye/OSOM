@@ -109,6 +109,9 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        futura: ['var(--font-futura)', 'system-ui', 'sans-serif'],
+        garamond: ['var(--font-garamond)', 'EB Garamond', 'serif'],
+        cooper: ['var(--font-cooper-black)', 'Cooper Black', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

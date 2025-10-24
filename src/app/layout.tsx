@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, EB_Garamond } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -7,6 +8,34 @@ import Footer from "@/components/Footer";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+});
+
+const futura = localFont({
+  src: [
+    {
+      path: "../../public/Futuri Extra Bold Oblique.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-futura",
+});
+
+const garamond = EB_Garamond({
+  subsets: ["latin"],
+  variable: "--font-garamond",
+  weight: ["400", "500", "600", "700", "800"],
+});
+
+const cooperBlack = localFont({
+  src: [
+    {
+      path: "../../public/Cooper Black Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-cooper-black",
 });
 
 export const metadata: Metadata = {
@@ -67,7 +96,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${futura.variable} ${garamond.variable} ${cooperBlack.variable} font-sans antialiased`}>
         <Navigation />
         <main className="min-h-screen">
           {children}
