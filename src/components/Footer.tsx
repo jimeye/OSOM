@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Leaf, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, MessageCircle } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -19,6 +19,15 @@ export default function Footer() {
               financée par les CEE dans les DOM-TOM.
             </p>
             <div className="flex space-x-4">
+              <a 
+                href="https://wa.me/33123456789?text=Bonjour%2C%20je%20souhaite%20en%20savoir%20plus%20sur%20les%20solutions%20LED%20OSOM%20dans%20les%20DOM-TOM" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-neutral-400 hover:text-green-500 transition-colors"
+                title="Contactez-nous sur WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
@@ -88,6 +97,15 @@ export default function Footer() {
                 <MapPin className="w-4 h-4 text-primary-500" />
                 <span className="text-sm text-neutral-300">DOM-TOM</span>
               </div>
+              <a 
+                href="https://wa.me/33123456789?text=Bonjour%2C%20je%20souhaite%20un%20audit%20gratuit%20pour%20mes%20économies%20d%27énergie%20avec%20OSOM" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 mt-4"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span className="text-sm font-medium">WhatsApp</span>
+              </a>
             </div>
           </div>
         </div>

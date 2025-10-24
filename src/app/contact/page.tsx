@@ -12,7 +12,8 @@ import {
   Building, 
   MessageSquare,
   Clock,
-  Shield
+  Shield,
+  MessageCircle
 } from 'lucide-react';
 
 export default function ContactPage() {

@@ -8,5 +8,13 @@ export const metadata: Metadata = {
     title: 'Solutions LED Intérieures & Extérieures - OSOM',
     description: 'Découvrez nos solutions LED professionnelles pour l\'intérieur et l\'extérieur. Éclairage LED haute performance financé par les CEE dans les DOM-TOM.',
     url: 'https://osom.fr/solutions',
+    images: [
+      {
+        url: 'https://osom.fr/hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'OSOM - Solutions LED professionnelles',
+      },
+    ],
   },
 }

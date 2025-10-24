@@ -32,11 +32,20 @@ export const metadata: Metadata = {
     siteName: 'OSOM',
     locale: 'fr_FR',
     type: 'website',
+    images: [
+      {
+        url: 'https://osom.fr/hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'OSOM - Solutions LED financées par les CEE dans les DOM-TOM',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: "OSOM – LED Intérieures & Extérieures Financé par les CEE dans les DOM-TOM",
     description: "Installation LED professionnelle sans frais pour les entreprises des DOM-TOM, financée par le dispositif des CEE.",
+    images: ['https://osom.fr/hero.jpg'],
   },
   robots: {
     index: true,
