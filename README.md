@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# OSOM - Ouvriers Solidaires d'Outre-Mer
 
-## Getting Started
+Site web pour OSOM, générateur de leads pour la rénovation énergétique et l'installation de LED dans les DOM-TOM, financé par le dispositif CEE.
 
-First, run the development server:
+## 🚀 Technologies
+
+- **Next.js 14** (App Router)
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion** (animations)
+- **Lucide React** (icônes)
+
+## 📦 Installation
 
 ```bash
+# Cloner le projet
+git clone <repository-url>
+cd osom-website
+
+# Installer les dépendances
+npm install
+
+# Lancer en développement
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Commandes disponibles
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Développement
+npm run dev          # Lance le serveur de développement sur http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Production
+npm run build        # Construit l'application pour la production
+npm run start        # Lance l'application en mode production
 
-## Learn More
+# Qualité du code
+npm run lint         # Vérifie le code avec ESLint
+npm run type-check   # Vérifie les types TypeScript
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Structure du projet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/
+├── app/                    # App Router (Next.js 14)
+│   ├── layout.tsx         # Layout principal
+│   ├── page.tsx           # Page d'accueil
+│   ├── solutions/         # Page solutions LED
+│   ├── cee/              # Page dispositif CEE
+│   ├── contact/          # Page contact
+│   ├── sitemap.ts        # Sitemap XML
+│   ├── robots.ts         # Robots.txt
+│   └── manifest.ts       # PWA manifest
+├── components/            # Composants réutilisables
+│   ├── Navigation.tsx    # Navigation principale
+│   └── Footer.tsx        # Footer
+└── globals.css           # Styles globaux
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Design System
 
-## Deploy on Vercel
+### Couleurs
+- **Primary**: Vert sauge (#2d9a5a)
+- **Secondary**: Bleu-azur (#0ea5e9)
+- **Neutral**: Noir carbone (#171717)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Typographie
+- **Font**: Inter (Google Fonts)
+- **Weights**: 400, 500, 600, 700
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Animations
+- **Framer Motion** pour les animations fluides
+- **Transitions** CSS pour les interactions
+- **Hover effects** subtils et élégants
+
+## 📱 Fonctionnalités
+
+### Pages
+- **Accueil** : Hero, avantages, solutions, témoignages
+- **Solutions** : LED intérieures et extérieures
+- **CEE** : Explication du dispositif
+- **Contact** : Formulaire de contact animé
+
+### SEO
+- **Meta tags** optimisés
+- **Open Graph** pour les réseaux sociaux
+- **Sitemap XML** automatique
+- **Robots.txt** configuré
+- **Structured data** pour les moteurs de recherche
+
+### Performance
+- **Core Web Vitals** optimisés
+- **Images** optimisées avec Next.js
+- **Lazy loading** des composants
+- **Code splitting** automatique
+
+## 🚀 Déploiement
+
+### Vercel (Recommandé)
+```bash
+# Installer Vercel CLI
+npm i -g vercel
+
+# Déployer
+vercel
+
+# Déploiement automatique
+# Connecter le repository GitHub à Vercel
+```
+
+### Variables d'environnement
+```bash
+# .env.local
+NEXT_PUBLIC_SITE_URL=https://osom.fr
+NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+```
+
+## 📊 Analytics
+
+- **Google Analytics** (à configurer)
+- **Google Search Console** (à configurer)
+- **Core Web Vitals** monitoring
+
+## 🔧 Configuration
+
+### Tailwind CSS
+Configuration personnalisée dans `tailwind.config.ts` avec :
+- Palette de couleurs OSOM
+- Animations personnalisées
+- Typographie Inter
+
+### Framer Motion
+Animations fluides et performantes :
+- Page transitions
+- Scroll animations
+- Hover effects
+- Loading states
+
+## 📈 Optimisations
+
+- **Images** : Format WebP, lazy loading
+- **Fonts** : Google Fonts optimisées
+- **CSS** : Tailwind CSS purgé
+- **JavaScript** : Code splitting
+- **SEO** : Meta tags, sitemap, robots.txt
+
+## 🛡️ Sécurité
+
+- **Headers** de sécurité configurés
+- **CSP** (Content Security Policy)
+- **HTTPS** obligatoire en production
+- **Validation** des formulaires
+
+## 📞 Support
+
+Pour toute question technique :
+- **Email** : dev@osom.fr
+- **Documentation** : Voir les commentaires dans le code
+
+---
+
+**OSOM** - Ouvriers Solidaires d'Outre-Mer  
+*Installation LED professionnelle financée par les CEE dans les DOM-TOM*

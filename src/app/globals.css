@@ -3,6 +3,24 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Couleurs écologiques principales */
+  --primary-50: #f0f9f4;
+  --primary-500: #2d9a5a;
+  --primary-600: #217a47;
+  --primary-700: #1c6139;
+  
+  /* Couleurs écologiques secondaires */
+  --forest-500: #22c55e;
+  --forest-600: #16a34a;
+  --ocean-500: #14b8a6;
+  --ocean-600: #0d9488;
+  --earth-500: #d4ac0d;
+  --earth-600: #b7950b;
+  --leaf-500: #84cc16;
+  --leaf-600: #65a30d;
+  --moss-500: #64748b;
+  --moss-600: #475569;
 }
 
 @theme inline {
@@ -10,6 +28,15 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  
+  /* Variables pour les couleurs écologiques */
+  --color-primary: var(--primary-500);
+  --color-primary-hover: var(--primary-600);
+  --color-forest: var(--forest-500);
+  --color-ocean: var(--ocean-500);
+  --color-earth: var(--earth-500);
+  --color-leaf: var(--leaf-500);
+  --color-moss: var(--moss-500);
 }
 
 @media (prefers-color-scheme: dark) {
