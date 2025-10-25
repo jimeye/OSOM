@@ -97,7 +97,7 @@ export default function HomePage() {
                 ease: [0.34, 1.56, 0.64, 1],
                 delay: 0.6
               }}
-              className="flex flex-col sm:flex-row gap-6 justify-start items-start"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <motion.button
                 whileHover={{ 
@@ -149,18 +149,18 @@ export default function HomePage() {
                 ease: [0.25, 0.46, 0.45, 0.94],
                 delay: 1.2
               }}
-              className="mt-8 flex flex-wrap justify-start items-center gap-6 text-xs xl:text-sm text-white/80"
+              className="mt-12 flex flex-wrap justify-center items-center gap-10 text-base xl:text-lg text-white/80"
             >
-              <div className="flex items-center space-x-1 backdrop-blur-sm bg-white/10 px-3 py-1 rounded-full">
-                <Shield className="w-3 h-3 text-forest-300" />
+              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-5 py-3 rounded-full">
+                <Shield className="w-5 h-5 text-forest-300" />
                 <span className="font-medium">Certifié CEE</span>
               </div>
-              <div className="flex items-center space-x-1 backdrop-blur-sm bg-white/10 px-3 py-1 rounded-full">
-                <Award className="w-3 h-3 text-forest-300" />
+              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-5 py-3 rounded-full">
+                <Award className="w-5 h-5 text-forest-300" />
                 <span className="font-medium">100% Gratuit</span>
               </div>
-              <div className="flex items-center space-x-1 backdrop-blur-sm bg-white/10 px-3 py-1 rounded-full">
-                <CheckCircle className="w-3 h-3 text-forest-300" />
+              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-5 py-3 rounded-full">
+                <CheckCircle className="w-5 h-5 text-forest-300" />
                 <span className="font-medium">DOM-TOM</span>
               </div>
             </motion.div>
