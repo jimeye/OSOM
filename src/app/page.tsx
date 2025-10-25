@@ -28,7 +28,7 @@ export default function HomePage() {
         {/* Décoration subtile */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         
-        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 relative z-10 w-full">
           <div className="text-left">
             <motion.div
               initial={{ opacity: 0, x: -150, scale: 0.3, rotateX: -45, rotateY: -15 }}
@@ -113,11 +113,11 @@ export default function HomePage() {
                   ease: [0.34, 1.56, 0.64, 1],
                   delay: 0.8
                 }}
-                className="bg-forest-500 text-white px-10 py-5 rounded-full font-semibold text-xl xl:text-2xl hover:bg-forest-600 transition-all duration-300 flex items-center space-x-3 shadow-2xl hover:shadow-forest-500/25 backdrop-blur-sm"
+                className="bg-forest-500 text-white px-4 py-2 rounded-full font-semibold text-sm xl:text-base hover:bg-forest-600 transition-all duration-300 flex items-center space-x-1 shadow-2xl hover:shadow-forest-500/25 backdrop-blur-sm"
               >
-                <Zap className="w-6 h-6 xl:w-7 xl:h-7" />
+                <Zap className="w-3 h-3 xl:w-4 xl:h-4" />
                 <span>Vérifiez votre éligibilité</span>
-                <ArrowRight className="w-6 h-6 xl:w-7 xl:h-7" />
+                <ArrowRight className="w-3 h-3 xl:w-4 xl:h-4" />
               </motion.button>
               
               <motion.button
@@ -134,7 +134,7 @@ export default function HomePage() {
                   ease: [0.34, 1.56, 0.64, 1],
                   delay: 1.0
                 }}
-                className="border-2 border-white/80 text-white px-10 py-5 rounded-full font-semibold text-xl xl:text-2xl hover:bg-white/10 transition-all duration-300 flex items-center space-x-3 backdrop-blur-sm"
+                className="border-2 border-white/80 text-white px-4 py-2 rounded-full font-semibold text-sm xl:text-base hover:bg-white/10 transition-all duration-300 flex items-center space-x-1 backdrop-blur-sm"
               >
                 <span>En savoir plus</span>
               </motion.button>
@@ -149,18 +149,18 @@ export default function HomePage() {
                 ease: [0.25, 0.46, 0.45, 0.94],
                 delay: 1.2
               }}
-              className="mt-16 flex flex-wrap justify-start items-center gap-12 text-lg xl:text-xl text-white/80"
+              className="mt-8 flex flex-wrap justify-start items-center gap-6 text-xs xl:text-sm text-white/80"
             >
-              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-6 py-3 rounded-full">
-                <Shield className="w-6 h-6 text-forest-300" />
+              <div className="flex items-center space-x-1 backdrop-blur-sm bg-white/10 px-3 py-1 rounded-full">
+                <Shield className="w-3 h-3 text-forest-300" />
                 <span className="font-medium">Certifié CEE</span>
               </div>
-              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-6 py-3 rounded-full">
-                <Award className="w-6 h-6 text-forest-300" />
+              <div className="flex items-center space-x-1 backdrop-blur-sm bg-white/10 px-3 py-1 rounded-full">
+                <Award className="w-3 h-3 text-forest-300" />
                 <span className="font-medium">100% Gratuit</span>
               </div>
-              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-6 py-3 rounded-full">
-                <CheckCircle className="w-6 h-6 text-forest-300" />
+              <div className="flex items-center space-x-1 backdrop-blur-sm bg-white/10 px-3 py-1 rounded-full">
+                <CheckCircle className="w-3 h-3 text-forest-300" />
                 <span className="font-medium">DOM-TOM</span>
               </div>
             </motion.div>

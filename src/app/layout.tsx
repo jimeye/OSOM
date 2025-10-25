@@ -95,10 +95,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={`${inter.variable} ${futura.variable} ${garamond.variable} ${cooperBlack.variable} font-sans antialiased`}>
+    <html lang="fr" className="overflow-x-hidden">
+      <body className={`${inter.variable} ${futura.variable} ${garamond.variable} ${cooperBlack.variable} font-sans antialiased overflow-x-hidden`}>
         <Navigation />
-        <main className="min-h-screen">
+        <main className="min-h-screen overflow-x-hidden">
           {children}
         </main>
         <Footer />

@@ -20,7 +20,10 @@ export default function Navigation() {
       setIsTestPage(window.location.pathname.includes('/test-'));
     };
     
+    // Initialiser l'état au chargement
+    handleScroll();
     checkTestPage();
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -76,7 +79,7 @@ export default function Navigation() {
                     ? 'text-black hover:text-primary-600' 
                     : (scrolled 
                         ? 'text-neutral-700 hover:text-primary-600' 
-                        : 'text-white/90 hover:text-white drop-shadow-md')
+                        : 'text-white hover:text-white drop-shadow-lg')
                 }`}
               >
                 {item.label}
@@ -88,11 +91,9 @@ export default function Navigation() {
               className={`px-6 py-2 rounded-full font-medium transition-all duration-200 flex items-center space-x-2 ${
                 isTestPage
                   ? 'bg-primary-500 text-white hover:bg-primary-600' 
-                  : (                isTestPage
-                  ? 'bg-primary-500 text-white hover:bg-primary-600' 
                   : (scrolled 
                       ? 'bg-primary-500 text-white hover:bg-primary-600' 
-                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30'))
+                      : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30')
               }`}
             >
               <Zap className="w-4 h-4" />
