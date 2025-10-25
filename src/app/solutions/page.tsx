@@ -27,10 +27,10 @@ export default function SolutionsPage() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Nos solutions LED
             </h1>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white max-w-3xl mx-auto mb-8">
               Éclairage LED professionnel intérieur et extérieur, 
               entièrement financé par le dispositif CEE dans les DOM-TOM
             </p>
@@ -51,7 +51,7 @@ export default function SolutionsPage() {
             <div>
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
-                  <Lightbulb className="w-6 h-6 text-primary-600" />
+                  <Lightbulb className="w-6 h-6 text-yellow-400" />
                 </div>
                 <h2 className="text-3xl font-bold text-neutral-900">LED Intérieures</h2>
               </div>
@@ -63,17 +63,17 @@ export default function SolutionsPage() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: <Building className="w-5 h-5" />,
+                    icon: <Building className="w-5 h-5 text-green-500" />,
                     title: "Bureaux & Entreprises",
                     description: "Éclairage LED pour bureaux, open spaces, salles de réunion"
                   },
                   {
-                    icon: <Home className="w-5 h-5" />,
+                    icon: <Home className="w-5 h-5 text-green-500" />,
                     title: "Commerces & Restaurants", 
                     description: "Éclairage LED pour magasins, restaurants, hôtels"
                   },
                   {
-                    icon: <Car className="w-5 h-5" />,
+                    icon: <Car className="w-5 h-5 text-green-500" />,
                     title: "Entrepôts & Stockage",
                     description: "Éclairage LED haute puissance pour entrepôts et zones de stockage"
                   }
@@ -170,7 +170,7 @@ export default function SolutionsPage() {
             <div className="order-1 lg:order-2">
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
-                  <Sun className="w-6 h-6 text-secondary-600" />
+                  <Sun className="w-6 h-6 text-yellow-400" />
                 </div>
                 <h2 className="text-3xl font-bold text-neutral-900">LED Extérieures</h2>
               </div>
@@ -182,17 +182,17 @@ export default function SolutionsPage() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: <Car className="w-5 h-5" />,
+                    icon: <Car className="w-5 h-5 text-green-500" />,
                     title: "Parkings & Cours",
                     description: "Éclairage LED pour parkings, cours d'entreprises, zones de chargement"
                   },
                   {
-                    icon: <TreePine className="w-5 h-5" />,
+                    icon: <TreePine className="w-5 h-5 text-green-500" />,
                     title: "Espaces Verts",
                     description: "Éclairage LED pour jardins, espaces verts, façades"
                   },
                   {
-                    icon: <Building className="w-5 h-5" />,
+                    icon: <Building className="w-5 h-5 text-green-500" />,
                     title: "Sécurité Extérieure",
                     description: "Éclairage LED avec détection de mouvement pour la sécurité"
                   }
@@ -245,37 +245,37 @@ export default function SolutionsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="w-8 h-8" />,
+                icon: <Zap className="w-8 h-8 text-green-500" />,
                 title: "Économies d'énergie",
                 description: "Jusqu'à 80% de réduction de votre facture d'électricité",
                 color: "text-yellow-500"
               },
               {
-                icon: <Clock className="w-8 h-8" />,
+                icon: <Clock className="w-8 h-8 text-green-500" />,
                 title: "Durée de vie exceptionnelle",
                 description: "50 000 heures de fonctionnement, soit plus de 10 ans",
                 color: "text-blue-500"
               },
               {
-                icon: <Shield className="w-8 h-8" />,
+                icon: <Shield className="w-8 h-8 text-red-600" />,
                 title: "Installation gratuite",
                 description: "100% financé par le dispositif CEE, aucun coût pour vous",
                 color: "text-green-500"
               },
               {
-                icon: <CheckCircle className="w-8 h-8" />,
+                icon: <CheckCircle className="w-8 h-8 text-red-600" />,
                 title: "Qualité certifiée",
                 description: "Produits certifiés CE et conformes aux normes européennes",
                 color: "text-purple-500"
               },
               {
-                icon: <Sun className="w-8 h-8" />,
+                icon: <Sun className="w-8 h-8 text-yellow-400" />,
                 title: "Éclairage optimal",
                 description: "Luminosité constante et température de couleur ajustable",
                 color: "text-orange-500"
               },
               {
-                icon: <Lightbulb className="w-8 h-8" />,
+                icon: <Lightbulb className="w-8 h-8 text-yellow-400" />,
                 title: "Maintenance réduite",
                 description: "Quasi-absence de maintenance grâce à la technologie LED",
                 color: "text-indigo-500"
@@ -323,11 +323,11 @@ export default function SolutionsPage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-50 transition-all duration-300 flex items-center space-x-2 mx-auto shadow-lg hover:shadow-xl"
+              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-neutral-50 transition-all duration-300 flex items-center space-x-2 mx-auto shadow-lg hover:shadow-xl"
             >
-              <Zap className="w-5 h-5" />
+              <Zap className="w-5 h-5 text-green-500" />
               <span>Demander un audit gratuit</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 text-green-500" />
             </motion.button>
           </motion.div>
         </div>

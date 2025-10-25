@@ -79,7 +79,7 @@ export default function ContactPage() {
           className="max-w-md mx-auto px-4 text-center"
         >
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-10 h-10 text-green-500" />
+            <CheckCircle className="w-10 h-10 text-red-600" />
           </div>
           <h1 className="text-3xl font-bold text-neutral-900 mb-4">
             Message envoyé !
@@ -102,7 +102,7 @@ export default function ContactPage() {
                 message: ''
               });
             }}
-            className="bg-primary-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-primary-600 transition-colors duration-300"
+            className="bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors duration-300"
           >
             Envoyer un nouveau message
           </motion.button>
@@ -296,7 +296,7 @@ export default function ContactPage() {
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
+                    <Send className="w-5 h-5 text-green-500" />
                     <span>Envoyer ma demande</span>
                   </>
                 )}
@@ -318,17 +318,17 @@ export default function ContactPage() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: <Shield className="w-6 h-6" />,
+                    icon: <Shield className="w-6 h-6 text-red-600" />,
                     title: "100% Gratuit",
                     description: "Votre audit et vos travaux sont entièrement financés par les CEE"
                   },
                   {
-                    icon: <Clock className="w-6 h-6" />,
+                    icon: <Clock className="w-6 h-6 text-green-500" />,
                     title: "Réponse rapide",
                     description: "Nous vous contactons sous 24h pour planifier votre audit"
                   },
                   {
-                    icon: <CheckCircle className="w-6 h-6" />,
+                    icon: <CheckCircle className="w-6 h-6 text-green-500" />,
                     title: "Expertise DOM-TOM",
                     description: "Notre équipe connaît parfaitement les spécificités des territoires d'outre-mer"
                   }

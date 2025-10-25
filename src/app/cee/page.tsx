@@ -36,7 +36,7 @@ export default function CEEPage() {
               sans aucun coût pour votre entreprise
             </p>
             <div className="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
-              <Shield className="w-4 h-4" />
+              <Shield className="w-4 h-4 text-red-600" />
               <span>100% Gratuit pour votre entreprise</span>
             </div>
           </motion.div>
@@ -66,17 +66,17 @@ export default function CEEPage() {
               <div className="space-y-6">
                 {[
                   {
-                    icon: <FileText className="w-6 h-6" />,
+                    icon: <FileText className="w-6 h-6 text-green-500" />,
                     title: "Dispositif national",
                     description: "Obligation légale des fournisseurs d'énergie depuis 2006"
                   },
                   {
-                    icon: <Euro className="w-6 h-6" />,
+                    icon: <Euro className="w-6 h-6 text-green-500" />,
                     title: "Financement intégral",
                     description: "Vos travaux sont entièrement pris en charge par les CEE"
                   },
                   {
-                    icon: <Award className="w-6 h-6" />,
+                    icon: <Award className="w-6 h-6 text-red-600" />,
                     title: "Certification officielle",
                     description: "Travaux réalisés par des professionnels certifiés RGE"
                   }
@@ -171,19 +171,19 @@ export default function CEEPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Building className="w-8 h-8" />,
+                icon: <Building className="w-8 h-8 text-green-500" />,
                 title: "Entreprises",
                 description: "Toutes les entreprises privées et publiques des DOM-TOM",
                 color: "text-blue-500"
               },
               {
-                icon: <Users className="w-8 h-8" />,
+                icon: <Users className="w-8 h-8 text-green-500" />,
                 title: "Collectivités",
                 description: "Mairies, conseils régionaux, établissements publics",
                 color: "text-green-500"
               },
               {
-                icon: <Zap className="w-8 h-8" />,
+                icon: <Zap className="w-8 h-8 text-green-500" />,
                 title: "Associations",
                 description: "Associations et organisations à but non lucratif",
                 color: "text-purple-500"
@@ -277,37 +277,37 @@ export default function CEEPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                icon: <Euro className="w-8 h-8" />,
+                icon: <Euro className="w-8 h-8 text-green-500" />,
                 title: "100% Gratuit",
                 description: "Aucun coût pour votre entreprise, tout est financé par les CEE",
                 color: "text-green-500"
               },
               {
-                icon: <TrendingUp className="w-8 h-8" />,
+                icon: <TrendingUp className="w-8 h-8 text-green-500" />,
                 title: "Économies immédiates",
                 description: "Réduction immédiate de votre facture d'électricité",
                 color: "text-blue-500"
               },
               {
-                icon: <Leaf className="w-8 h-8" />,
+                icon: <Leaf className="w-8 h-8 text-green-500" />,
                 title: "Impact environnemental",
                 description: "Réduction de votre empreinte carbone et consommation énergétique",
                 color: "text-green-600"
               },
               {
-                icon: <Clock className="w-8 h-8" />,
+                icon: <Clock className="w-8 h-8 text-green-500" />,
                 title: "Processus simplifié",
                 description: "Nous nous occupons de toute la paperasserie administrative",
                 color: "text-purple-500"
               },
               {
-                icon: <Award className="w-8 h-8" />,
+                icon: <Award className="w-8 h-8 text-red-600" />,
                 title: "Certification officielle",
                 description: "Travaux réalisés par des professionnels certifiés RGE",
                 color: "text-orange-500"
               },
               {
-                icon: <Shield className="w-8 h-8" />,
+                icon: <Shield className="w-8 h-8 text-red-600" />,
                 title: "Garantie qualité",
                 description: "Produits et installation garantis selon les normes CEE",
                 color: "text-indigo-500"
@@ -436,9 +436,9 @@ export default function CEEPage() {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-50 transition-all duration-300 flex items-center space-x-2 mx-auto shadow-lg hover:shadow-xl"
             >
-              <Zap className="w-5 h-5" />
+              <Zap className="w-5 h-5 text-green-500" />
               <span>Vérifier mon éligibilité</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 text-green-500" />
             </motion.button>
           </motion.div>
         </div>

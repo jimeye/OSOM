@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-white" />
+                <Leaf className="w-5 h-5 text-green-500" />
               </div>
               <span className="text-xl font-bold">OSOM</span>
             </div>
@@ -26,16 +26,16 @@ export default function Footer() {
                 className="text-neutral-400 hover:text-green-500 transition-colors"
                 title="Contactez-nous sur WhatsApp"
               >
-                <MessageCircle className="w-5 h-5" />
+                <MessageCircle className="w-5 h-5 text-green-500" />
               </a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-5 h-5 text-green-500" />
               </a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Twitter className="w-5 h-5 text-green-500" />
               </a>
               <a href="#" className="text-neutral-400 hover:text-white transition-colors">
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-5 h-5 text-green-500" />
               </a>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 mt-4"
               >
-                <MessageCircle className="w-4 h-4" />
+                <MessageCircle className="w-4 h-4 text-green-500" />
                 <span className="text-sm font-medium">WhatsApp</span>
               </a>
             </div>

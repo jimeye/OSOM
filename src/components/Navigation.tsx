@@ -58,7 +58,7 @@ export default function Navigation() {
               className="flex items-center space-x-2"
             >
               <div className="w-8 h-8 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-white" />
+                <Leaf className="w-5 h-5 text-green-500" />
               </div>
               <span className={`text-xl font-bold transition-colors duration-300 ${
                 isTestPage ? 'text-black' : (scrolled ? 'text-neutral-900' : 'text-white drop-shadow-lg')
@@ -88,7 +88,7 @@ export default function Navigation() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 flex items-center space-x-2 ${
+              className={`px-6 py-2 rounded-lg font-medium transition-all duration-200 flex items-center space-x-2 ${
                 isTestPage
                   ? 'bg-primary-500 text-white hover:bg-primary-600' 
                   : (scrolled 
@@ -96,7 +96,7 @@ export default function Navigation() {
                       : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30')
               }`}
             >
-              <Zap className="w-4 h-4" />
+              <Zap className="w-4 h-4 text-green-500" />
               <span>Vérifier l'éligibilité</span>
             </motion.button>
           </div>
@@ -106,13 +106,13 @@ export default function Navigation() {
             onClick={() => setIsOpen(!isOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
               isTestPage
-                ? 'text-black hover:bg-gray-100' 
+                ? 'text-black' 
                 : (scrolled 
-                    ? 'text-neutral-700 hover:bg-neutral-100' 
-                    : 'text-white hover:bg-white/20')
+                    ? 'text-neutral-700' 
+                    : 'text-white')
             }`}
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-6 h-6 text-green-500" /> : <Menu className="w-6 h-6 text-green-500" />}
           </button>
         </div>
       </div>
@@ -152,7 +152,7 @@ export default function Navigation() {
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className={`w-full px-6 py-3 rounded-full font-medium transition-colors duration-200 flex items-center justify-center space-x-2 ${
+                className={`w-full px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center space-x-2 ${
                 isTestPage
                   ? 'bg-primary-500 text-white hover:bg-primary-600' 
                   : (scrolled 
@@ -160,7 +160,7 @@ export default function Navigation() {
                       : 'bg-white/20 text-white hover:bg-white/30 backdrop-blur-sm border border-white/30')
                 }`}
               >
-                <Zap className="w-4 h-4" />
+                <Zap className="w-4 h-4 text-green-500" />
                 <span>Vérifier l'éligibilité</span>
               </motion.button>
             </div>

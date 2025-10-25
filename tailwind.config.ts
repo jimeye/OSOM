@@ -10,16 +10,16 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f0f9f4',
-          100: '#dcf2e3',
-          200: '#bce5cc',
-          300: '#8dd1a8',
-          400: '#56b47e',
-          500: '#2d9a5a', // Vert sauge principal
-          600: '#217a47',
-          700: '#1c6139',
-          800: '#184d2f',
-          900: '#154028',
+          50: '#f0f4ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#002395', // Bleu Guadeloupe
+          600: '#001d7a',
+          700: '#00175f',
+          800: '#001144',
+          900: '#000b29',
         },
         secondary: {
           50: '#f0f9ff',
@@ -35,16 +35,16 @@ const config: Config = {
         },
         // Couleurs écologiques supplémentaires
         forest: {
-          50: '#f0fdf4',
-          100: '#dcfce7',
-          200: '#bbf7d0',
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e', // Vert forêt
-          600: '#16a34a',
-          700: '#15803d',
-          800: '#166534',
-          900: '#14532d',
+          50: '#fef2f2',
+          100: '#fee2e2',
+          200: '#fecaca',
+          300: '#fca5a5',
+          400: '#f87171',
+          500: '#ED2939', // Rouge Guadeloupe
+          600: '#d41e2e',
+          700: '#b91c2c',
+          800: '#991b1b',
+          900: '#7f1d1d',
         },
         earth: {
           50: '#fefdf8',

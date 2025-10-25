@@ -62,7 +62,7 @@ export default function HomePage() {
                   rotateY: 3,
                   transition: { duration: 0.3 }
                 }}
-                className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-white mb-6 leading-none drop-shadow-2xl tracking-wider text-left"
+                className="text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-white mb-6 leading-none drop-shadow-2xl tracking-wider text-left"
               >
                 <motion.span 
                   initial={{ opacity: 0, x: -100, scale: 0.8 }}
@@ -78,14 +78,14 @@ export default function HomePage() {
                     textShadow: "0 0 20px rgba(34, 197, 94, 0.5)",
                     transition: { duration: 0.3 }
                   }}
-                  className="text-white/90 text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold tracking-widest leading-none"
+                  className="text-white text-4xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold tracking-widest leading-none"
                 >
                   Remplacement LED Intérieur & Extérieur 100% Gratuit en DOM-TOM
                 </motion.span>
               </motion.h1>
-              <p className="text-xl md:text-2xl xl:text-3xl 2xl:text-4xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-md">
+              <p className="text-xl sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl text-white mb-8 max-w-4xl leading-relaxed drop-shadow-md font-bold text-left">
                 Grâce aux LED financées par les CEE dans les DOM-TOM. 
-                <span className="font-semibold text-forest-300"> Vos travaux sont 100% gratuits.</span>
+                <span className="text-forest-300"> Vos travaux sont 100% gratuits.</span>
               </p>
             </motion.div>
 
@@ -97,27 +97,40 @@ export default function HomePage() {
                 ease: [0.34, 1.56, 0.64, 1],
                 delay: 0.6
               }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="flex flex-col gap-6 justify-center items-center"
             >
               <motion.button
-                whileHover={{ 
-                  scale: 1.08, 
+                whileHover={{
+                  scale: 1.08,
                   y: -2,
-                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.3)"
+                  boxShadow: "0 20px 40px rgba(34, 197, 94, 0.3)",
+                  color: "#22c55e",
+                  textShadow: "0 0 20px rgba(34, 197, 94, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={{ 
+                  opacity: 1, 
+                  x: 0,
+                  scale: [1, 1.1, 1],
+                }}
                 transition={{ 
                   duration: 0.8, 
                   ease: [0.34, 1.56, 0.64, 1],
-                  delay: 0.8
+                  delay: 0.8,
+                  scale: {
+                    duration: 0.8,
+                    repeat: Infinity,
+                    repeatDelay: 2.5,
+                    ease: "easeInOut",
+                    times: [0, 0.5, 1]
+                  }
                 }}
-                className="bg-forest-500 text-white px-4 py-2 rounded-full font-semibold text-sm xl:text-base hover:bg-forest-600 transition-all duration-300 flex items-center space-x-1 shadow-2xl hover:shadow-forest-500/25 backdrop-blur-sm"
+                className="bg-forest-500 text-white px-6 py-3 sm:px-4 sm:py-2 rounded-lg font-semibold text-base sm:text-sm xl:text-lg hover:bg-forest-600 transition-all duration-300 flex items-center space-x-2 shadow-2xl hover:shadow-forest-500/25 backdrop-blur-sm border-2 border-white"
               >
-                <Zap className="w-3 h-3 xl:w-4 xl:h-4" />
+                <Zap className="w-4 h-4 xl:w-5 xl:h-5" />
                 <span>Vérifiez votre éligibilité</span>
-                <ArrowRight className="w-3 h-3 xl:w-4 xl:h-4" />
+                <ArrowRight className="w-4 h-4 xl:w-5 xl:h-5" />
               </motion.button>
               
               <motion.button
@@ -134,7 +147,7 @@ export default function HomePage() {
                   ease: [0.34, 1.56, 0.64, 1],
                   delay: 1.0
                 }}
-                className="border-2 border-white/80 text-white px-4 py-2 rounded-full font-semibold text-sm xl:text-base hover:bg-white/10 transition-all duration-300 flex items-center space-x-1 backdrop-blur-sm"
+                className="border-2 border-white/80 text-white px-4 py-2 rounded-lg font-semibold text-sm xl:text-base hover:bg-white/10 transition-all duration-300 flex items-center space-x-1 backdrop-blur-sm"
               >
                 <span>En savoir plus</span>
               </motion.button>
@@ -149,19 +162,46 @@ export default function HomePage() {
                 ease: [0.25, 0.46, 0.45, 0.94],
                 delay: 1.2
               }}
-              className="mt-12 flex flex-wrap justify-center items-center gap-10 text-base xl:text-lg text-white/80"
+              className="mt-10 sm:mt-6 flex justify-center items-center gap-8 sm:gap-4 text-sm sm:text-xs xl:text-base text-white/80"
             >
-              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-5 py-3 rounded-full">
-                <Shield className="w-5 h-5 text-forest-300" />
+              <div className="flex items-center space-x-2 sm:space-x-1 backdrop-blur-sm bg-white/10 px-4 sm:px-2 py-2 sm:py-1 xl:px-6 xl:py-3 rounded-lg">
+                <Shield className="w-4 h-4 xl:w-6 xl:h-6 text-white" />
                 <span className="font-medium">Certifié CEE</span>
               </div>
-              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-5 py-3 rounded-full">
-                <Award className="w-5 h-5 text-forest-300" />
+              <div className="flex items-center space-x-2 sm:space-x-1 backdrop-blur-sm bg-white/10 px-4 sm:px-2 py-2 sm:py-1 xl:px-6 xl:py-3 rounded-lg">
+                <Award className="w-4 h-4 xl:w-6 xl:h-6 text-white" />
                 <span className="font-medium">100% Gratuit</span>
               </div>
-              <div className="flex items-center space-x-3 backdrop-blur-sm bg-white/10 px-5 py-3 rounded-full">
-                <CheckCircle className="w-5 h-5 text-forest-300" />
+              <div className="flex items-center space-x-2 sm:space-x-1 backdrop-blur-sm bg-white/10 px-4 sm:px-2 py-2 sm:py-1 xl:px-6 xl:py-3 rounded-lg">
+                <CheckCircle className="w-4 h-4 xl:w-6 xl:h-6 text-white" />
                 <span className="font-medium">DOM-TOM</span>
+              </div>
+            </motion.div>
+
+            {/* Nouveaux badges */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ 
+                duration: 1.0, 
+                ease: [0.25, 0.46, 0.45, 0.94],
+                delay: 1.4
+              }}
+              className="mt-6 flex flex-col items-center gap-4 text-sm sm:text-xs xl:text-base text-white/80"
+            >
+              <div className="flex justify-center items-center gap-8 sm:gap-4">
+                <div className="flex items-center space-x-2 sm:space-x-1 backdrop-blur-sm bg-white/10 px-4 sm:px-2 py-2 sm:py-1 xl:px-6 xl:py-3 rounded-lg">
+                  <CheckCircle className="w-4 h-4 xl:w-6 xl:h-6 text-white" />
+                  <span className="font-medium">Audit gratuit</span>
+                </div>
+                <div className="flex items-center space-x-2 sm:space-x-1 backdrop-blur-sm bg-white/10 px-4 sm:px-2 py-2 sm:py-1 xl:px-6 xl:py-3 rounded-lg">
+                  <Shield className="w-4 h-4 xl:w-6 xl:h-6 text-white" />
+                  <span className="font-medium">Remplacement certifié</span>
+                </div>
+              </div>
+              <div className="flex items-center space-x-2 sm:space-x-1 backdrop-blur-sm bg-white/10 px-4 sm:px-2 py-2 sm:py-1 xl:px-6 xl:py-3 rounded-lg">
+                <Zap className="w-4 h-4 xl:w-6 xl:h-6 text-white" />
+                <span className="font-medium">Jusqu'à -70% de consommation</span>
               </div>
             </motion.div>
           </div>
@@ -193,17 +233,17 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="w-8 h-8" />,
+                icon: <Zap className="w-8 h-8 text-green-500" />,
                 title: "100% Gratuit",
                 description: "Vos travaux d'éclairage LED sont entièrement financés par le dispositif CEE. Aucun coût pour votre entreprise."
               },
               {
-                icon: <Leaf className="w-8 h-8" />,
+                icon: <Leaf className="w-8 h-8 text-green-500" />,
                 title: "Écologique",
                 description: "Réduisez votre empreinte carbone avec des LED haute efficacité énergétique et une durée de vie exceptionnelle."
               },
               {
-                icon: <Shield className="w-8 h-8" />,
+                icon: <Shield className="w-8 h-8 text-green-500" />,
                 title: "Expertise DOM-TOM",
                 description: "Notre équipe connaît parfaitement les spécificités des territoires d'outre-mer et leurs contraintes."
               }
@@ -254,10 +294,10 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Nos solutions LED
             </h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
+            <p className="text-xl text-white max-w-3xl mx-auto">
               Éclairage LED intérieur et extérieur pour tous vos espaces professionnels
             </p>
           </motion.div>
@@ -272,7 +312,7 @@ export default function HomePage() {
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mr-4">
-                  <Lightbulb className="w-6 h-6 text-primary-600" />
+                  <Lightbulb className="w-6 h-6 text-yellow-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-neutral-900">LED Intérieures</h3>
               </div>
@@ -282,15 +322,15 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
                   <span>Température de couleur ajustable</span>
                 </li>
                 <li className="flex items-center text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
                   <span>Durée de vie : 50 000 heures</span>
                 </li>
                 <li className="flex items-center text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
                   <span>Installation professionnelle incluse</span>
                 </li>
               </ul>
@@ -312,7 +352,7 @@ export default function HomePage() {
             >
               <div className="flex items-center mb-6">
                 <div className="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center mr-4">
-                  <Sun className="w-6 h-6 text-secondary-600" />
+                  <Sun className="w-6 h-6 text-yellow-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-neutral-900">LED Extérieures</h3>
               </div>
@@ -322,15 +362,15 @@ export default function HomePage() {
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
                   <span>Protection IP65/66</span>
                 </li>
                 <li className="flex items-center text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
                   <span>Détection de mouvement</span>
                 </li>
                 <li className="flex items-center text-neutral-700">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-3" />
+                  <CheckCircle className="w-5 h-5 text-red-600 mr-3" />
                   <span>Résistant aux cyclones</span>
                 </li>
               </ul>
@@ -392,16 +432,60 @@ export default function HomePage() {
             ].map((step, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 30, scale: 0.8 }}
+                whileInView={{ 
+                  opacity: 1, 
+                  y: 0, 
+                  scale: 1,
+                  rotate: [0, 5, -5, 0]
+                }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.3,
+                  scale: {
+                    duration: 0.4,
+                    delay: index * 0.3
+                  },
+                  rotate: {
+                    duration: 0.6,
+                    delay: index * 0.3 + 0.2
+                  }
+                }}
                 viewport={{ once: true }}
                 className="text-center"
               >
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-white font-bold text-lg">{step.step}</span>
-                  </div>
+                  <motion.div 
+                    className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4"
+                    whileInView={{
+                      scale: [1, 1.1, 1],
+                      boxShadow: [
+                        "0 4px 8px rgba(0, 0, 0, 0.1)",
+                        "0 8px 25px rgba(34, 197, 94, 0.3)",
+                        "0 4px 8px rgba(0, 0, 0, 0.1)"
+                      ]
+                    }}
+                    transition={{
+                      duration: 0.6,
+                      delay: index * 0.3 + 0.4
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    <motion.span 
+                      className="text-green-500 font-bold text-xl"
+                      whileInView={{
+                        scale: [1, 1.2, 1],
+                        color: ["#22c55e", "#16a34a", "#22c55e"]
+                      }}
+                      transition={{
+                        duration: 0.5,
+                        delay: index * 0.3 + 0.6
+                      }}
+                      viewport={{ once: true }}
+                    >
+                      {step.step}
+                    </motion.span>
+                  </motion.div>
                   {index < 3 && (
                     <div className="hidden lg:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500 transform translate-x-8"></div>
                   )}
@@ -513,7 +597,7 @@ export default function HomePage() {
                 viewport={{ once: true }}
                 className="bg-white p-6 rounded-xl shadow-lg"
               >
-                <div className="text-3xl font-bold text-primary-600 mb-2">
+                <div className="text-3xl font-bold text-green-500 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-neutral-600 font-medium">
@@ -546,11 +630,11 @@ export default function HomePage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-primary-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-neutral-50 transition-all duration-300 flex items-center space-x-2 mx-auto shadow-lg hover:shadow-xl"
+              className="bg-forest-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-forest-600 transition-all duration-300 flex items-center space-x-2 mx-auto shadow-lg hover:shadow-xl border-2 border-white"
             >
-              <Zap className="w-5 h-5" />
+              <Zap className="w-5 h-5 text-green-500" />
               <span>Vérifier mon éligibilité</span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5 text-green-500" />
             </motion.button>
           </motion.div>
         </div>
